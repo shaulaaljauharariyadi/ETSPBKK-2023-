@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Semua Rekam Medis</title>
+</head>
+<body>
+    <h1>Semua Rekam Medis</h1>
+    <ul>
+        {% for rekam_medis in rekam_medis %}
+        <a href="{% url 'riwayat_rekam_medis_pasien' pasien_id=rekam_medis.pasien.id %}">
+            {{ rekam_medis.pasien.nama }}
+        </a><br>
+    {% endfor %}
+    </ul>
+</body>
+</html>
